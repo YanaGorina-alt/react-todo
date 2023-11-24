@@ -1,4 +1,5 @@
 import React from 'react';
+import InpitWithLabel from './InputWithLabel';
 
 function AddTodoForm ({addTodoForm}){
 
@@ -21,8 +22,7 @@ function AddTodoForm ({addTodoForm}){
     return(
         <div>
             <form onSubmit = {handleAddTodo}>
-                <label htmlFor="todoTitle">Title</label>
-                <input id="todoTitle" value={todoTitle} name="title" onChange={handleTitleChange}></input>
+                <InpitWithLabel todoTitle={todoTitle} handleTitleChange={handleTitleChange} >Title: </InpitWithLabel>
                 <button>Add</button>
             </form>
         </div>
